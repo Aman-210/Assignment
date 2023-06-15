@@ -49,7 +49,7 @@ function App() {
     });
   }
   return (
-   <BrowserRouter>
+   <BrowserRouter  basename='Assignment'>
    <Header  size={cart.length}/>
    <Routes>
     <Route path='/' element={<Page1  handleClick={handleClick} />}></Route>
