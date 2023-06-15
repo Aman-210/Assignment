@@ -1,3 +1,4 @@
+// Imports
 import {Box , Typography , styled} from '@mui/material'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { useEffect } from 'react';
@@ -6,7 +7,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 
-
+// styling
 const Section = styled(Box)(({theme})=>({
     marginTop:"5vh",
     background:"black",
@@ -30,17 +31,17 @@ const Image = styled('img')(({theme})=>({
    marginTop:"20vh",
    objectFit:'cover',
    imageRendering:'auto',
-   [theme.breakpoints.down('sm')]:{
-   marginTop:"8vh",
-   
-   height:'25vh',
-   width:"44vh"
-   },
    [theme.breakpoints.down('lg')]:{
    marginTop:"8vh",
    marginLeft:"10vh",
    height:'25vh',
    width:"50vh"
+   },
+   [theme.breakpoints.down('sm')]:{
+   marginTop:"8vh",
+   
+   height:'25vh',
+   width:"44vh"
    },
 }));
 
@@ -109,6 +110,8 @@ const Quality = styled(Typography)(({theme})=>({
     color:"#fff",
     
   }))
+//  End of Styling
+
 
 const Detail = ()=>{
   const { id } = useParams();
@@ -142,7 +145,7 @@ const Detail = ()=>{
         <Details><Quality>Weight </Quality><Arrow/><Quantity>{itemDetails?.weight}Kg</Quantity> </Details>
         <Details><Quality>Species </Quality><Arrow/><Quantity>{itemDetails?.species?.name}</Quantity> </Details>
         <Details><Quality>Moves </Quality><Arrow/><Quantity>{itemDetails?.moves?.length}</Quantity> </Details>
-        <Details><Quality>Attacks </Quality><Arrow/><Quantity>{itemDetails?.stats?.find((stat) => stat.stat.name === "special-attack")  ?.base_stat}</Quantity> </Details>
+        <Details><Quality>Attacks </Quality><Arrow/><Quantity>{itemDetails?.stats?.find((stat) => stat.stat.name === "special-attack")?.base_stat}</Quantity> </Details>
         <Details><Quality>Speed</Quality><Arrow/><Quantity>  {itemDetails?.stats?.find((stat) => stat.stat.name === "speed")?.base_stat}</Quantity> </Details>
         <Details><Quality>Defense </Quality><Arrow/><Quantity>{itemDetails?.stats?.find((stat) => stat.stat.name === "defense")?.base_stat}</Quantity></Details>
        

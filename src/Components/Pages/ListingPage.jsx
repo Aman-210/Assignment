@@ -1,5 +1,5 @@
 // Import Components from Material UI
-import {Box,  CircularProgress  , styled} from '@mui/material'
+import {Box,  styled} from '@mui/material'
 import axios from 'axios'
 import { useState } from "react";
 import { useEffect } from "react";
@@ -23,7 +23,7 @@ const Section = styled(Box)(({theme})=>({
   display:"block"
     },
 }))
-
+// End of Styling 
   
     
    const Page1 = ({handleClick})=>{

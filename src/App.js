@@ -8,11 +8,11 @@ import Favourite from './Components/Pages/Favourite';
 import { useState } from 'react';
 import { Typography , styled} from '@mui/material';
 
-import Result from './Components/Pages/SearchResult';
+
 
 const Warning = styled(Typography)(({theme})=>({
   width:'250px',
-  height:"48vpx",
+  height:"48px",
   position:'absolute',
   right:0,
   top:"10%",
@@ -21,7 +21,8 @@ const Warning = styled(Typography)(({theme})=>({
   fontSize:'1.1rem',
   fontFamily:"cursive",
   padding:"5px",
-  borderRadius:"5px"
+  borderRadius:"5px",
+  
   
   }));
 
@@ -53,7 +54,7 @@ function App() {
    <Routes>
     <Route path='/' element={<Page1  handleClick={handleClick} />}></Route>
     <Route path='/detail/:id' element={<Detail />}></Route>
-    <Route path='/find' element={<Result />}></Route>
+    
     
     <Route path='/favourite' element={<Favourite cart={cart} setCart={setCart} />}></Route>
    </Routes>

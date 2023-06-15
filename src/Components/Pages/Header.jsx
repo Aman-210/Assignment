@@ -65,17 +65,19 @@ const Number = styled('span')(({theme})=>({
    height:"24px",
    fontSize:"20px",
    width:"20px",
-
+   [theme.breakpoints.down('sm')]:{
+     width:'0px',
+     height:'0px',
+     marginLeft:"-1.5vh",
+     color:"#fff",
+     marginTop:"-1.5vh"
+      },
 }))
 const StyleIcon = styled(SearchIcon)(({theme})=>({
     marginLeft:"1vh" , 
     fontSize:'35px' , 
     marginTop:'.5vh',
-    [theme.breakpoints.down('lg')]:{
-     
     
-      
-      },
     [theme.breakpoints.down('sm')]:{
       marginLeft:"0vh",
       fontSize:"20px"
@@ -117,14 +119,14 @@ const Favourite = styled(Typography)(({theme})=>({
       
       },
     [theme.breakpoints.down('sm')]:{
-        marginLeft:"1vh",
+        marginLeft:".5vh",
         fontSize:"15px",
         marginTop:'1vh'
     },
 
 }))
 
-
+// End of Styling
 
 const Header = ({size})=>{
   
@@ -141,11 +143,11 @@ const Header = ({size})=>{
             placeholder="Search..."
            
           />
-          <Link to='/find'>
+         
           <StyledButton>
                 Find
             </StyledButton>
-            </Link>
+           
             </Search>
            <Box>
             

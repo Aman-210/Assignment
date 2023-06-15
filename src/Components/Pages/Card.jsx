@@ -1,7 +1,9 @@
-import { styled , Card, CardActions , CardContent , CardMedia , Button , Typography, CircularProgress} from '@mui/material'
+
+// Imports
+import { styled , Card,  CardContent , CardMedia ,  Typography, CircularProgress} from '@mui/material'
 import { Link } from 'react-router-dom'
 import Rating from '@mui/material/Rating';
-import { useState } from 'react';
+
 
 
 
@@ -56,14 +58,11 @@ const StyledCard = styled(Card)(({theme})=>({
    marginLeft:'5vh'
    
    }));
-   
+   // End of styling
 
    
 
  const Item = ({ pokemon, loading, handleClick })=>{
-
-
-   
             
             return(
                <>
@@ -92,8 +91,7 @@ const StyledCard = styled(Card)(({theme})=>({
             )
          })
          
-      }
-            
+      } 
                 </>
             )
 

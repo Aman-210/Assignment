@@ -1,13 +1,10 @@
-import { styled , Card, Box, CardContent , CardMedia , Typography, } from '@mui/material'
-import ClearIcon from '@mui/icons-material/Clear';
+ // Imports
+ import { styled , Card, Box, CardContent , CardMedia , Typography, } from '@mui/material'
+ import ClearIcon from '@mui/icons-material/Clear';
 
 
-
-
-// Styling
-
-
-const Section = styled(Box)(({theme})=>({
+ //Styling 
+  const Section = styled(Box)(({theme})=>({
     background:'#f2f2f2',
     
     marginTop:'8vh',
@@ -67,7 +64,7 @@ const StyledCard = styled(Card)(({theme})=>({
     cursor:"pointer"
     
   }))
-
+// End of styling
 
 const Favourite = ({cart , setCart})=>{
     const handleRemove = (id) =>{
@@ -96,8 +93,7 @@ const Favourite = ({cart , setCart})=>{
        );
         })}
   
-           
-
+        
             </Section> 
          </> 
         ) 
